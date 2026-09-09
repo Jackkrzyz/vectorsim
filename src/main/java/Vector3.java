@@ -72,7 +72,7 @@ public class Vector3 {
 
     }
 
-    public double AngleBetween(Vector3 other) {
+    public double angleBetween(Vector3 other) {
         double mag1 = this.magnitude();
         double mag2 = other.magnitude();
         if (mag1 == 0 || mag2 == 0) {return Double.NaN;}
