@@ -57,7 +57,6 @@ mvn javafx:run
 ```
 
 ## todo
-- delete vectors
+- visual vector manipulation
 - custom cone mesh
-- cylinder rotation isn't 100% accurate
 
