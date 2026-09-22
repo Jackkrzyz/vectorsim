@@ -246,7 +246,7 @@ public class VectorApp extends Application {
 
         
 
-        Vector3 endpoint = vector.scale(visualScale);
+        Vector3 endpoint = Vector3.flipY(vector.scale(visualScale));
         double length = endpoint.magnitude();
         if (length == 0) { return arrow; }
 
@@ -263,7 +263,7 @@ public class VectorApp extends Application {
         / find axis (<0,1,0> cross direction vector)
         / apply rotate
         */
-        Vector3 targetDirection = vector.normalize();
+        Vector3 targetDirection =Vector3.flipY( vector.normalize());
         Vector3 yAxisVec = new Vector3(0,1,0);
         double rotationAngle = Math.toDegrees(targetDirection.angleBetween(yAxisVec));
 
@@ -300,7 +300,7 @@ public class VectorApp extends Application {
         Group world = new Group();
         Group objects = new Group();
 
-        Rotate xRotate = new Rotate(-20, Rotate.X_AXIS);
+        Rotate xRotate = new Rotate(20, Rotate.X_AXIS);
         Rotate yRotate = new Rotate(30, Rotate.Y_AXIS);
 
         objects.getTransforms().addAll(xRotate, yRotate);

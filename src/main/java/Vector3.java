@@ -33,6 +33,13 @@ public class Vector3 {
                 this.z*scalar
         );
     }
+    public static Vector3 flipY(Vector3 other) {
+        return new Vector3 (
+            other.x,
+            other.y*-1,
+            other.z
+        );
+    }
 
     public double dot(Vector3 other) {
         return this.x*other.x + this.y*other.y + this.z*other.z;
@@ -69,8 +76,8 @@ public class Vector3 {
             returning "this" is just a design choice
              */
         }
-
     }
+    
 
     public double angleBetween(Vector3 other) {
         double mag1 = this.magnitude();
